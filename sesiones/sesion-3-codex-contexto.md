@@ -1,4 +1,4 @@
-# Sesion 3 - Usar Copilot con contexto en LaTeX
+# Sesion 3 - Usar Codex con contexto en LaTeX
 
 ## Duracion
 
@@ -6,7 +6,7 @@
 
 ## Objetivo
 
-Aprender a pedir ayuda a Copilot usando un documento LaTeX como contexto y comprobando que la IA no inventa datos.
+Aprender a pedir ayuda a Codex usando un documento LaTeX como contexto y comprobando que la IA no inventa datos.
 
 En esta sesion todo el material de trabajo se mantiene en LaTeX. El contexto sera un archivo `.tex` y el borrador tambien sera un archivo `.tex`.
 
@@ -135,7 +135,7 @@ Guarda el archivo.
 
 ### Paso 5. Hacer una pregunta demasiado vaga
 
-Con `borrador_informe.tex` abierto, pregunta a Copilot:
+Copia el contenido de `borrador_informe.tex` y pregunta a Codex:
 
 ```text
 Completa este informe.
@@ -143,7 +143,7 @@ Completa este informe.
 
 Lee la respuesta, pero no la pegues en el documento.
 
-Comprueba si Copilot ha inventado datos, expedientes, fechas, normativa o actuaciones que no estaban en `fuentes_municipales.tex`.
+Comprueba si Codex ha inventado datos, expedientes, fechas, normativa o actuaciones que no estaban en `fuentes_municipales.tex`.
 
 ### Paso 6. Hacer una pregunta con contexto y limites
 
@@ -188,7 +188,7 @@ Comprueba que se genera:
 borrador_informe.pdf
 ```
 
-Si aparece un error, pregunta a Copilot:
+Si aparece un error, pregunta a Codex:
 
 ```text
 Tengo este error al compilar LaTeX.
@@ -220,12 +220,13 @@ Comprueba:
 ## Glosario de terminos
 
 - **IA generativa**: sistema capaz de producir texto, codigo u otros contenidos a partir de instrucciones.
-- **Copilot Chat**: panel de conversacion con Copilot dentro de VS Code.
+- **ChatGPT**: servicio donde se accede a la cuenta de IA del curso.
+- **Codex**: asistente de IA que ayuda a entender y modificar documentos o codigo.
 - **Prompt**: instruccion o pregunta escrita a una IA.
 - **Contexto**: informacion que se entrega a la IA para limitar y orientar la respuesta.
-- **Archivo abierto**: archivo visible en el editor que Copilot puede usar como referencia.
+- **Fragmento copiado**: parte del archivo que se pega en Codex para pedir ayuda.
 - **Alucinacion**: respuesta generada por una IA que contiene informacion inventada o no justificada.
 - **Formato LaTeX**: estructura tecnica del documento, con comandos como `\section` o `\begin`.
 - **Error de compilacion**: problema que impide generar el PDF.
 - **Linea de error**: numero o zona del archivo donde LaTeX indica que puede estar el problema.
-- **Salida**: resultado que produce una herramienta, como una respuesta de Copilot o un PDF.
+- **Salida**: resultado que produce una herramienta, como una respuesta de Codex o un PDF.

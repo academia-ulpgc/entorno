@@ -1,4 +1,4 @@
-# Entorno. VS Code, LaTeX y Copilot para programar documentos
+# Entorno. VS Code, LaTeX y Codex para programar documentos
 
 ## Proposito
 
@@ -27,9 +27,9 @@ Cada sesion es tambien una practica. El estudiante sigue el archivo de la sesion
 
 ## Sesiones
 
-- [Sesion 1 - Preparar VS Code, LaTeX y Copilot](sesiones/sesion-1-preparar-vscode.md)
+- [Sesion 1 - Preparar VS Code, LaTeX y Codex](sesiones/sesion-1-preparar-vscode.md)
 - [Sesion 2 - Crear un documento municipal estructurado](sesiones/sesion-2-documento-municipal.md)
-- [Sesion 3 - Usar Copilot con contexto y sin inventar informacion](sesiones/sesion-3-copilot-contexto.md)
+- [Sesion 3 - Usar Codex con contexto y sin inventar informacion](sesiones/sesion-3-codex-contexto.md)
 - [Sesion 4 - Primer uso de Python para generar un documento LaTeX](sesiones/sesion-4-entrega.md)
 
 ## Checklists
@@ -88,15 +88,13 @@ En la primera sesion, el proyecto se llama **e1**.
   - Identificador: `James-Yu.latex-workshop`
   - Uso: compilar documentos LaTeX con el icono de Play y abrir el PDF dentro de VS Code.
 
-- GitHub Copilot:
-  - Creador: GitHub
-  - Identificador: `GitHub.copilot`
-  - Uso: pedir ayuda para explicar, revisar y mejorar documentos.
+- ChatGPT:
+  - Uso: acceder a la cuenta del curso y trabajar con Codex como asistente de IA.
+  - Enlace: <https://chatgpt.com/>
 
-- GitHub Copilot Chat:
-  - Creador: GitHub
-  - Identificador: `GitHub.copilot-chat`
-  - Uso: conversar con Copilot dentro de VS Code.
+- Codex:
+  - Uso: pedir ayuda para explicar, revisar y mejorar documentos y codigo.
+  - Acceso: desde la cuenta de ChatGPT indicada para el curso.
 
 - Python:
   - Uso: se introduce solo en la ultima sesion para generar automaticamente un archivo LaTeX sencillo.
@@ -126,6 +124,6 @@ Al terminar Entorno, cada participante deberia poder:
 - compilar con el icono de Play;
 - reconocer el PDF como resultado;
 - entender que LaTeX genera archivos auxiliares como `.aux`, `.log` o `.synctex.gz`;
-- pedir ayuda a Copilot sin aceptar automaticamente lo que proponga;
+- pedir ayuda a Codex sin aceptar automaticamente lo que proponga;
 - entender que Python puede crear archivos automaticamente;
 - revisar documentos antes de entregarlos.

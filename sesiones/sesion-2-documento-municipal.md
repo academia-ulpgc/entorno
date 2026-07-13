@@ -144,9 +144,9 @@ Antes de firmar o remitir el informe se comprobara:
 
 Guarda y compila otra vez.
 
-### Paso 7. Pedir una explicacion a Copilot
+### Paso 7. Pedir una explicacion a Codex
 
-Pregunta a Copilot:
+Copia el contenido de `informe_servicios.tex` y pregunta a Codex:
 
 ```text
 Explicame este documento LaTeX para una persona que esta empezando.

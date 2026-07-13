@@ -1,4 +1,4 @@
-# Sesion 1 - Preparar VS Code, LaTeX y Copilot
+# Sesion 1 - Preparar VS Code, LaTeX y Codex
 
 ## Duracion
 
@@ -6,7 +6,7 @@
 
 ## Objetivo
 
-Preparar Visual Studio Code para trabajar con documentos LaTeX en español y empezar a usar Copilot como apoyo.
+Preparar Visual Studio Code para trabajar con documentos LaTeX en español y empezar a usar Codex, desde la cuenta de ChatGPT, como apoyo.
 
 En esta sesion se introduce una idea importante: **hacer documentos en LaTeX se parece a programar**.
 
@@ -95,9 +95,33 @@ Pulsa **Instalar**.
 
 No hace falta instalar otro visor de PDF para esta practica. LaTeX Workshop incluye un visor integrado dentro de VS Code.
 
+### Paso 5. Configurar el PDF para que se abra en la ventana principal
+
+Para evitar muchas ventanas, configura LaTeX Workshop para abrir el PDF como una pestaña dentro de VS Code.
+
+En la carpeta `e1`, crea una carpeta llamada:
+
+```text
+.vscode
+```
+
+Dentro de `.vscode`, crea un archivo llamado:
+
+```text
+settings.json
+```
+
+Pega exactamente:
+
+```json
+{
+  "latex-workshop.view.pdf.viewer": "tab"
+}
+```
+
 Guarda el archivo.
 
-### Paso 5. Crear el archivo LaTeX
+### Paso 6. Crear el archivo LaTeX
 
 En la carpeta `e1`, crea:
 
@@ -210,38 +234,30 @@ Debe abrirse como una pestaña dentro de la ventana principal.
 
 Si se abre en otra columna o resulta incomodo, cierra esa vista y vuelve a abrir el PDF desde el explorador. La idea es trabajar con una sola ventana principal para no perderse.
 
-### Paso 10. Instalar y activar Copilot
+### Paso 10. Abrir ChatGPT y usar Codex
 
-En extensiones, busca:
+Abre ChatGPT en el navegador:
 
 ```text
-GitHub Copilot
+https://chatgpt.com/
 ```
 
-Instala tambien Copilot Chat si no aparece automaticamente.
+Inicia sesion con la cuenta indicada para el curso.
 
-Datos de referencia:
+Si la cuenta muestra Codex como opcion, selecciona Codex. Si no aparece, usa ChatGPT como asistente siguiendo las mismas instrucciones.
 
-- GitHub Copilot:
-  - Creador: GitHub
-  - Identificador: `GitHub.copilot`
+No hace falta instalar ninguna extension adicional de IA en VS Code para esta practica.
 
-- GitHub Copilot Chat:
-  - Creador: GitHub
-  - Identificador: `GitHub.copilot-chat`
+La forma de trabajo sera:
 
-Inicia sesion con la cuenta indicada por la organizacion.
+- escribir y compilar el documento en VS Code;
+- copiar a Codex solo el fragmento necesario;
+- pedir explicaciones o mejoras concretas;
+- revisar la respuesta antes de cambiar el archivo.
 
-Si aparece SSO:
+### Paso 11. Usar Codex para entender el documento
 
-- elige la organizacion o proveedor indicado;
-- introduce tus credenciales institucionales;
-- completa la verificacion adicional si se solicita;
-- acepta volver a VS Code.
-
-### Paso 11. Usar Copilot para entender el documento
-
-Abre `informe_prueba.tex` y pregunta a Copilot:
+Abre `informe_prueba.tex`, copia su contenido y pregunta a Codex:
 
 ```text
 Explicame la estructura de este documento LaTeX.
@@ -258,7 +274,7 @@ No inventes informacion.
 Explica el cambio antes de proponer el texto.
 ```
 
-No aceptes cambios automaticamente. Aplica manualmente solo lo que entiendas.
+No aceptes cambios automaticamente. Aplica manualmente en VS Code solo lo que entiendas.
 
 ## Producto de la sesion
 
@@ -266,7 +282,7 @@ No aceptes cambios automaticamente. Aplica manualmente solo lo que entiendas.
 - Archivo `informe_prueba.tex`.
 - PDF generado desde LaTeX.
 - Archivos auxiliares creados por la compilacion.
-- Respuesta de Copilot explicando el documento.
+- Respuesta de Codex explicando el documento.
 - Checklist de la sesion 1 compilado por el estudiante a partir de `checklists/checklist-sesion-1.tex`.
 
 ## Glosario de terminos
@@ -282,5 +298,6 @@ No aceptes cambios automaticamente. Aplica manualmente solo lo que entiendas.
 - **Icono de Play**: boton que ejecuta la compilacion.
 - **Archivo auxiliar**: archivo tecnico creado durante la compilacion, como `.aux`, `.log` o `.synctex.gz`.
 - **`settings.json`**: archivo de configuracion de VS Code.
-- **Copilot**: asistente de IA integrado en VS Code.
-- **SSO**: sistema de inicio de sesion unico.
+- **ChatGPT**: servicio donde se accede a la cuenta de IA del curso.
+- **Codex**: asistente de IA que ayuda a entender y modificar documentos o codigo.
+- **Prompt**: instruccion o pregunta escrita a una IA.

@@ -185,9 +185,9 @@ informe_generado.pdf
 
 Si aparecen archivos `.aux`, `.log`, `.synctex.gz`, `.fls` o `.fdb_latexmk`, recuerda que son archivos auxiliares normales de LaTeX.
 
-### Paso 8. Pedir ayuda a Copilot
+### Paso 8. Pedir ayuda a Codex
 
-Pregunta a Copilot:
+Copia el programa `generar_informe.py` y pregunta a Codex:
 
 ```text
 Explicame este programa Python para una persona que no sabe programar.
