@@ -1,5 +1,12 @@
-import tkinter as tk
-from tkinter import messagebox
+import sys
+
+try:
+    import tkinter as tk
+    from tkinter import messagebox
+except ImportError:
+    print("No se ha podido abrir el juego porque Python no tiene disponible Tkinter.")
+    print("Copia este mensaje y pegalo en Codex para pedir ayuda desde VS Code.")
+    sys.exit(1)
 
 turno = "X"
 tablero = [""] * 9

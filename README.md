@@ -100,6 +100,7 @@ En la primera sesion, el proyecto se llama **e1**.
 - Python:
   - Uso: se introduce solo en la ultima sesion para ejecutar un programa sencillo ya preparado.
   - Forma de uso en el curso: siempre desde VS Code, usando botones y menus.
+  - Paquetes externos: la practica no requiere instalar paquetes adicionales de Python.
   - Enlace: <https://www.python.org/downloads/>
 
 - Extension Python para VS Code:

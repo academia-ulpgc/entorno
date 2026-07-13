@@ -126,6 +126,10 @@ Codex puede ayudarte a entender el problema y proponer pasos, pero la instalacio
 
 ### Paso 6. Crear el programa del juego
 
+Este programa no necesita instalar paquetes externos de Python.
+
+Usa `tkinter`, una herramienta que suele venir incluida con Python para crear ventanas sencillas. Si Codex propone instalar paquetes adicionales para esta practica, pide una version mas simple que use solo Python estandar.
+
 Dentro de `juegos`, crea un archivo llamado:
 
 ```text
@@ -135,8 +139,15 @@ juegos/tres_en_raya.py
 Pega este codigo completo:
 
 ```python
-import tkinter as tk
-from tkinter import messagebox
+import sys
+
+try:
+    import tkinter as tk
+    from tkinter import messagebox
+except ImportError:
+    print("No se ha podido abrir el juego porque Python no tiene disponible Tkinter.")
+    print("Copia este mensaje y pegalo en Codex para pedir ayuda desde VS Code.")
+    sys.exit(1)
 
 turno = "X"
 tablero = [""] * 9
@@ -272,6 +283,18 @@ Si no ves la ventana:
 - mira el Dock o la barra de tareas;
 - revisa el panel inferior de VS Code y busca el mensaje `Juego iniciado`;
 - si aparece un mensaje de error, copialo y pegalo en Codex.
+
+Si el mensaje dice que falta `Tkinter`, pregunta a Codex:
+
+```text
+Estoy ejecutando en VS Code el juego tres_en_raya.py.
+El panel inferior muestra este mensaje:
+
+[pega aqui el mensaje completo]
+
+Quiero resolverlo desde VS Code, sin escribir instrucciones fuera del editor.
+Si no es posible arreglar Tkinter facilmente, dame una version alternativa del juego que use solo Python estandar y no necesite abrir una ventana grafica.
+```
 
 Juega una partida pulsando en las casillas.
 
