@@ -32,14 +32,25 @@ Cada sesion es tambien una practica. El estudiante sigue el archivo de la sesion
 - [Sesion 3 - Usar Copilot con contexto y sin inventar informacion](sesiones/sesion-3-copilot-contexto.md)
 - [Sesion 4 - Primer uso de Python para generar un documento LaTeX](sesiones/sesion-4-entrega.md)
 
-## Checklists en PDF
+## Checklists
 
-Los checklists se entregan como documentos separados para que puedan imprimirse o revisarse al final de cada sesion.
+Los checklists no se entregan ya compilados en PDF. Cada estudiante debe generar su propio PDF a partir del archivo LaTeX correspondiente.
 
-- [Checklist sesion 1](checklists/checklist-sesion-1.pdf)
-- [Checklist sesion 2](checklists/checklist-sesion-2.pdf)
-- [Checklist sesion 3](checklists/checklist-sesion-3.pdf)
-- [Checklist sesion 4](checklists/checklist-sesion-4.pdf)
+Archivos fuente:
+
+- [Checklist sesion 1](checklists/checklist-sesion-1.tex)
+- [Checklist sesion 2](checklists/checklist-sesion-2.tex)
+- [Checklist sesion 3](checklists/checklist-sesion-3.tex)
+- [Checklist sesion 4](checklists/checklist-sesion-4.tex)
+
+Para generar el PDF de un checklist:
+
+1. Abre el archivo `.tex` del checklist en VS Code.
+2. Pulsa el icono de **Play** de LaTeX Workshop.
+3. Comprueba que aparece el PDF correspondiente.
+4. Abre el PDF en una pestaña de la ventana principal de VS Code.
+
+Al compilar tambien pueden aparecer archivos auxiliares como `.aux`, `.log` o `.synctex.gz`. Es normal: forman parte del proceso de generacion del PDF.
 
 ## Estructura de carpetas recomendada para el alumnado
 

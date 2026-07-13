@@ -215,7 +215,7 @@ Comprueba:
 - Archivo `borrador_informe.tex`.
 - PDF `borrador_informe.pdf`.
 - Comparacion entre una pregunta vaga y una pregunta con contexto.
-- Checklist de la sesion 3 completado en el PDF independiente.
+- Checklist de la sesion 3 compilado por el estudiante a partir de `checklists/checklist-sesion-3.tex`.
 
 ## Glosario de terminos
 

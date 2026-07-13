@@ -232,7 +232,7 @@ No es necesario copiar todos los archivos auxiliares. Pueden volver a generarse 
 - Archivo `informe_generado.tex`.
 - PDF `informe_generado.pdf`.
 - Carpeta `entrega`.
-- Checklist de la sesion 4 completado en el PDF independiente.
+- Checklist de la sesion 4 compilado por el estudiante a partir de `checklists/checklist-sesion-4.tex`.
 
 ## Glosario de terminos
 

@@ -170,7 +170,7 @@ Aplica manualmente solo el cambio que entiendas.
 - Archivo `informe_servicios.tex`.
 - PDF generado desde LaTeX.
 - Una modificacion realizada y compilada.
-- Checklist de la sesion 2 completado en el PDF independiente.
+- Checklist de la sesion 2 compilado por el estudiante a partir de `checklists/checklist-sesion-2.tex`.
 
 ## Glosario de terminos
 

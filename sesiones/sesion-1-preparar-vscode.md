@@ -267,7 +267,7 @@ No aceptes cambios automaticamente. Aplica manualmente solo lo que entiendas.
 - PDF generado desde LaTeX.
 - Archivos auxiliares creados por la compilacion.
 - Respuesta de Copilot explicando el documento.
-- Checklist de la sesion 1 completado en el PDF independiente.
+- Checklist de la sesion 1 compilado por el estudiante a partir de `checklists/checklist-sesion-1.tex`.
 
 ## Glosario de terminos
 
