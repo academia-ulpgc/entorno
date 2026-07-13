@@ -30,11 +30,12 @@ Cada sesion es tambien una practica. El estudiante sigue el archivo de la sesion
 - [Sesion 1 - Preparar VS Code, LaTeX y Codex](sesiones/sesion-1-preparar-vscode.md)
 - [Sesion 2 - Crear un documento municipal estructurado](sesiones/sesion-2-documento-municipal.md)
 - [Sesion 3 - Usar Codex con contexto y sin inventar informacion](sesiones/sesion-3-codex-contexto.md)
-- [Sesion 4 - Usar Python para rellenar una plantilla LaTeX](sesiones/sesion-4-entrega.md)
+- [Sesion 4 - Preparar Python en VS Code y ejecutar un programa](sesiones/sesion-4-entrega.md)
 
 ## Material de apoyo
 
 - [Bloque 2.1 - Presentacion de la primera sesion](bloque%202.1.pdf)
+- [Codigo de ejemplo de la sesion 4: tres en raya](materiales/tres_en_raya.py)
 
 ## Checklists
 
@@ -97,28 +98,23 @@ En la primera sesion, el proyecto se llama **e1**.
   - Acceso: <https://chatgpt.com/> con la cuenta indicada para el curso.
 
 - Python:
-  - Uso: se introduce solo en la ultima sesion para rellenar una plantilla LaTeX con datos de un archivo TSV.
+  - Uso: se introduce solo en la ultima sesion para ejecutar un programa sencillo ya preparado.
+  - Forma de uso en el curso: siempre desde VS Code, usando botones y menus.
   - Enlace: <https://www.python.org/downloads/>
 
 - Extension Python para VS Code:
   - Nombre exacto: Python
   - Creador oficial: Microsoft
   - Identificador: `ms-python.python`
-  - Uso: permite a VS Code trabajar mejor con archivos `.py`.
+  - Uso: permite a VS Code trabajar mejor con archivos `.py` y ejecutarlos con el boton **Run Python File**.
 
 ## Visor de PDF
 
 No hace falta instalar otro visor de PDF para estas practicas si LaTeX Workshop funciona correctamente. La extension incluye un visor integrado.
 
-Para evitar muchas ventanas abiertas, se configurara LaTeX Workshop para abrir el PDF en una pestaña de la ventana principal de VS Code.
+Para evitar muchas ventanas abiertas, se abrira el PDF desde el explorador de archivos de VS Code y se trabajara dentro de la ventana principal.
 
-La configuracion recomendada es:
-
-```json
-{
-  "latex-workshop.view.pdf.viewer": "tab"
-}
-```
+No se pedira al alumnado crear archivos de configuracion de VS Code.
 
 ## Resultado esperado
 
@@ -132,5 +128,5 @@ Al terminar Entorno, cada participante deberia poder:
 - entender que LaTeX genera archivos auxiliares como `.aux`, `.log` o `.synctex.gz`;
 - pedir ayuda a Codex sin aceptar automaticamente lo que proponga;
 - distinguir entre Python instalado en el ordenador y la extension Python de VS Code;
-- entender que Python puede abrir una plantilla, leer datos y crear documentos automaticamente;
+- ejecutar un programa Python sencillo desde VS Code;
 - revisar documentos antes de entregarlos.

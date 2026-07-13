@@ -1,4 +1,4 @@
-# Sesion 4 - Usar Python para rellenar una plantilla LaTeX
+# Sesion 4 - Preparar Python en VS Code y ejecutar un programa
 
 ## Duracion
 
@@ -6,16 +6,17 @@
 
 ## Objetivo
 
-Usar Python por primera vez en el bloque para generar varios documentos LaTeX a partir de una plantilla `.tex` y un archivo de datos `.tsv`.
+Dejar preparado VS Code para ejecutar Python y comprobarlo con un programa sencillo ya hecho.
 
-Hasta ahora se han escrito documentos LaTeX a mano. En esta sesion se introduce una idea nueva: separar el documento en dos partes.
+En esta sesion no se programa desde cero. La idea es aprender el circuito basico:
 
-- La carpeta **plantillas** contiene el formato y los huecos.
-- La carpeta **datos** contiene el archivo TSV.
-- La carpeta **resultados** contiene los documentos generados.
-- El **programa Python** abre la plantilla, lee los datos y sustituye cada hueco por el valor correspondiente.
+- crear una carpeta de proyecto;
+- crear o abrir un archivo `.py`;
+- ejecutar el archivo desde VS Code con el boton **Run Python File**;
+- observar el resultado;
+- pedir a Codex que explique el codigo con palabras sencillas.
 
-Esta forma de trabajar es muy habitual en automatizacion documental.
+El ejemplo sera un pequeno juego de **tres en raya**. El objetivo no es dominar Python, sino perderle el miedo al entorno.
 
 ## Practica paso a paso
 
@@ -33,21 +34,19 @@ Dentro de `e4`, crea esta estructura:
 
 ```text
 e4/
-  plantillas/
-  datos/
-  resultados/
+  juegos/
 ```
 
-La carpeta `resultados` tambien puede crearla Python automaticamente, pero conviene verla desde el principio para entender la organizacion del proyecto.
+Esta carpeta guardara el programa Python de la practica.
 
 ### Paso 2. Entender que hacen falta dos piezas
 
 Para trabajar con Python en VS Code hacen falta dos cosas distintas:
 
-- **Python instalado en el ordenador**: es el programa que ejecuta las instrucciones.
-- **Extension Python en VS Code**: es el complemento que ayuda a VS Code a entender archivos `.py`.
+- **Python instalado en el ordenador**: es el programa que ejecuta archivos `.py`.
+- **Extension Python en VS Code**: es el complemento que ayuda a VS Code a reconocer y ejecutar Python.
 
-La extension de VS Code no sustituye al programa Python. Puede ayudar a detectarlo, seleccionarlo y ejecutar archivos, pero Python debe estar instalado en el equipo.
+La extension de VS Code no sustituye al programa Python. Puede ayudar a detectarlo y ejecutarlo, pero Python debe estar instalado en el equipo.
 
 ### Paso 3. Instalar la extension Python en VS Code
 
@@ -68,294 +67,266 @@ Comprueba:
 
 Pulsa **Instalar**.
 
-### Paso 4. Comprobar que Python esta disponible
+### Paso 4. Comprobar Python desde VS Code
 
-Abre una terminal integrada en VS Code.
-
-Escribe:
+En `e4`, crea un archivo llamado:
 
 ```text
-python3 --version
-```
-
-Si en tu equipo se usa `python` en lugar de `python3`, escribe:
-
-```text
-python --version
-```
-
-Si no aparece una version de Python, anota la incidencia y sigue la explicacion del profesor.
-
-En algunos equipos, VS Code puede mostrar un aviso para instalar o seleccionar Python. Puedes seguir ese aviso si pertenece a VS Code y tienes permiso para instalar programas.
-
-Si has instalado Python y la terminal sigue sin reconocerlo, cierra la terminal integrada y abre una nueva. Si sigue fallando, reinicia VS Code.
-
-### Paso 5. Pedir ayuda a Codex si Python no aparece
-
-Si Python no aparece, no copies comandos al azar.
-
-Abre Codex y pregunta:
-
-```text
-Estoy preparando VS Code para ejecutar un script Python sencillo.
-Mi sistema operativo es: [Windows / macOS / Linux].
-Al escribir python3 --version o python --version no aparece una version de Python.
-
-Explicame paso a paso como comprobar si Python esta instalado.
-Si no lo esta, dime la forma mas segura de instalarlo.
-No des por hecho que tengo permisos de administrador.
-No ejecutes nada por mi.
-Antes de proponer comandos, explicame que hace cada paso.
-```
-
-Codex puede ayudarte a entender el problema y proponer pasos, pero la instalacion debe hacerla la persona, revisando cada accion.
-
-### Paso 6. Crear la plantilla LaTeX
-
-Dentro de `plantillas`, crea:
-
-```text
-plantillas/plantilla_informe.tex
-```
-
-Pega:
-
-```latex
-\documentclass[a4paper,12pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[spanish]{babel}
-
-\title{Informe municipal de incidencia}
-\author{Area de Atencion Ciudadana}
-\date{\today}
-
-\begin{document}
-
-\maketitle
-
-\section{Datos de la incidencia}
-
-\begin{itemize}
-    \item Expediente: {{expediente}}
-    \item Area responsable: {{area}}
-    \item Tipo de incidencia: {{tipo}}
-    \item Estado: {{estado}}
-    \item Avisos registrados: {{cantidad}}
-\end{itemize}
-
-\section{Resumen}
-
-{{resumen}}
-
-\section{Recomendacion}
-
-{{recomendacion}}
-
-\section{Comprobaciones}
-
-\begin{itemize}
-    \item Los datos usados en esta practica son ficticios.
-    \item El documento debe revisarse antes de usarse en un caso real.
-    \item No se han incluido datos personales.
-\end{itemize}
-
-\end{document}
-```
-
-Guarda el archivo.
-
-Fijate en los textos entre dobles llaves:
-
-```text
-{{expediente}}
-{{area}}
-{{tipo}}
-{{estado}}
-{{cantidad}}
-{{resumen}}
-{{recomendacion}}
-```
-
-Esos textos son **marcadores**. Python los reemplazara por datos.
-
-### Paso 7. Crear el archivo TSV
-
-Dentro de `datos`, crea:
-
-```text
-datos/datos_incidencias.tsv
-```
-
-Pega exactamente:
-
-```tsv
-expediente	area	tipo	estado	cantidad	resumen	recomendacion
-EXP-2026-001	Alumbrado publico	Avisos revisados	En revision	8	Se han recibido avisos ficticios relacionados con puntos de alumbrado en varias calles.	Revisar la concentracion de avisos y priorizar las zonas con mayor repeticion.
-EXP-2026-002	Aceras y pavimento	Avisos prioritarios	Pendiente	5	Se han registrado avisos ficticios sobre desperfectos en aceras y pavimento.	Priorizar los puntos que puedan afectar a la accesibilidad peatonal.
-EXP-2026-003	Limpieza viaria	Avisos programados	Programado	6	Se han agrupado avisos ficticios sobre limpieza en espacios publicos.	Coordinar la actuacion con el calendario ordinario del servicio.
-```
-
-Un archivo TSV es parecido a una hoja de calculo guardada como texto.
-
-La primera linea contiene los nombres de las columnas:
-
-```text
-expediente, area, tipo, estado, cantidad, resumen, recomendacion
-```
-
-Cada fila posterior contiene los datos de un documento.
-
-### Paso 8. Crear el programa Python
-
-En `e4`, crea:
-
-```text
-generar_informes.py
+probar_python.py
 ```
 
 Pega:
 
 ```python
-import csv
-from pathlib import Path
-
-carpeta_plantillas = Path("plantillas")
-carpeta_datos = Path("datos")
-carpeta_resultados = Path("resultados")
-
-archivo_plantilla = carpeta_plantillas / "plantilla_informe.tex"
-archivo_datos = carpeta_datos / "datos_incidencias.tsv"
-
-carpeta_resultados.mkdir(exist_ok=True)
-
-with open(archivo_plantilla, encoding="utf-8") as archivo:
-    plantilla = archivo.read()
-
-with open(archivo_datos, newline="", encoding="utf-8") as archivo:
-    lector = csv.DictReader(archivo, delimiter="\t")
-
-    for numero, fila in enumerate(lector, start=1):
-        documento = plantilla
-
-        for columna, valor in fila.items():
-            marcador = "{{" + columna + "}}"
-            documento = documento.replace(marcador, valor)
-
-        archivo_salida = carpeta_resultados / f"informe_{numero:02d}.tex"
-
-        with open(archivo_salida, "w", encoding="utf-8") as salida:
-            salida.write(documento)
-
-        print(f"Archivo generado: {archivo_salida}")
+print("Python funciona en VS Code")
 ```
 
 Guarda el archivo.
 
-### Paso 9. Ejecutar Python
+Con `probar_python.py` abierto, pulsa el boton **Run Python File**.
 
-En la terminal integrada, ejecuta:
+El boton suele aparecer en la parte superior derecha del editor, con forma de triangulo de Play.
 
-```text
-python3 generar_informes.py
-```
-
-Si tu equipo usa `python`, ejecuta:
+Comprueba que VS Code muestra el mensaje:
 
 ```text
-python generar_informes.py
+Python funciona en VS Code
 ```
 
-Comprueba que aparecen estos mensajes:
+Si VS Code abre un panel inferior para mostrar el resultado, solo miralo: no hace falta escribir nada ahi.
+
+Si VS Code pide seleccionar un interprete de Python, elige una opcion que diga Python 3.
+
+Si VS Code indica que no encuentra Python, puede mostrar un boton o aviso para instalarlo o seleccionarlo. Sigue solo instrucciones que pertenezcan a VS Code y que entiendas.
+
+### Paso 5. Pedir ayuda a Codex si Python no aparece
+
+Si Python no aparece, no copies instrucciones al azar.
+
+Abre Codex y pregunta:
 
 ```text
-Archivo generado: resultados/informe_01.tex
-Archivo generado: resultados/informe_02.tex
-Archivo generado: resultados/informe_03.tex
+Estoy preparando VS Code para ejecutar un archivo Python sencillo.
+Mi sistema operativo es: [Windows / macOS / Linux].
+
+He instalado la extension Python de Microsoft en VS Code.
+He creado un archivo probar_python.py con este contenido:
+
+print("Python funciona en VS Code")
+
+Al pulsar Run Python File, VS Code no encuentra Python o me pide seleccionar un interprete.
+
+Dame instrucciones paso a paso usando la interfaz de VS Code, sin pedirme que escriba nada fuera del editor.
+Si hay que instalar Python, explicame la forma mas segura de hacerlo.
+No des por hecho que tengo permisos de administrador.
+Antes de cada paso, explica que voy a comprobar.
 ```
 
-Los archivos se guardan dentro de:
+Codex puede ayudarte a entender el problema y proponer pasos, pero la instalacion debe hacerla la persona, revisando cada accion.
+
+### Paso 6. Crear el programa del juego
+
+Dentro de `juegos`, crea un archivo llamado:
 
 ```text
-resultados/
+juegos/tres_en_raya.py
 ```
 
-### Paso 10. Abrir un LaTeX generado
+Pega este codigo completo:
+
+```python
+import tkinter as tk
+from tkinter import messagebox
+
+turno = "X"
+tablero = [""] * 9
+botones = []
+
+combinaciones_ganadoras = [
+    (0, 1, 2),
+    (3, 4, 5),
+    (6, 7, 8),
+    (0, 3, 6),
+    (1, 4, 7),
+    (2, 5, 8),
+    (0, 4, 8),
+    (2, 4, 6),
+]
+
+
+def hay_ganador():
+    for a, b, c in combinaciones_ganadoras:
+        if tablero[a] and tablero[a] == tablero[b] == tablero[c]:
+            return tablero[a]
+    return ""
+
+
+def tablero_lleno():
+    return all(casilla != "" for casilla in tablero)
+
+
+def jugar(posicion):
+    global turno
+
+    if tablero[posicion] != "":
+        return
+
+    tablero[posicion] = turno
+    botones[posicion]["text"] = turno
+
+    ganador = hay_ganador()
+
+    if ganador:
+        etiqueta_estado["text"] = f"Ha ganado {ganador}"
+        messagebox.showinfo("Tres en raya", f"Ha ganado {ganador}")
+        bloquear_tablero()
+        return
+
+    if tablero_lleno():
+        etiqueta_estado["text"] = "Empate"
+        messagebox.showinfo("Tres en raya", "La partida ha terminado en empate")
+        return
+
+    turno = "O" if turno == "X" else "X"
+    etiqueta_estado["text"] = f"Turno de {turno}"
+
+
+def bloquear_tablero():
+    for boton in botones:
+        boton["state"] = "disabled"
+
+
+def nueva_partida():
+    global turno, tablero
+
+    turno = "X"
+    tablero = [""] * 9
+    etiqueta_estado["text"] = "Turno de X"
+
+    for boton in botones:
+        boton["text"] = ""
+        boton["state"] = "normal"
+
+
+ventana = tk.Tk()
+ventana.title("Tres en raya")
+ventana.resizable(False, False)
+
+etiqueta_estado = tk.Label(
+    ventana,
+    text="Turno de X",
+    font=("Arial", 16),
+    padx=10,
+    pady=10,
+)
+etiqueta_estado.grid(row=0, column=0, columnspan=3)
+
+for posicion in range(9):
+    boton = tk.Button(
+        ventana,
+        text="",
+        width=6,
+        height=3,
+        font=("Arial", 24),
+        command=lambda p=posicion: jugar(p),
+    )
+    boton.grid(row=1 + posicion // 3, column=posicion % 3, padx=4, pady=4)
+    botones.append(boton)
+
+boton_nueva = tk.Button(
+    ventana,
+    text="Nueva partida",
+    font=("Arial", 14),
+    command=nueva_partida,
+)
+boton_nueva.grid(row=4, column=0, columnspan=3, sticky="ew", padx=4, pady=8)
+
+ventana.mainloop()
+```
+
+Guarda el archivo.
+
+### Paso 7. Ejecutar el juego
 
 Abre:
 
 ```text
-resultados/informe_01.tex
+juegos/tres_en_raya.py
 ```
+
+Pulsa el boton **Run Python File**.
+
+Debe abrirse una ventana con un tablero de tres en raya.
+
+Juega una partida pulsando en las casillas.
 
 Comprueba:
 
-- que ya no aparecen marcadores como `{{area}}`;
-- que los datos coinciden con la primera fila del TSV;
-- que el formato general procede de `plantillas/plantilla_informe.tex`;
-- que no hay datos personales reales.
+- que el turno cambia entre `X` y `O`;
+- que el programa detecta cuando alguien gana;
+- que el boton **Nueva partida** reinicia el tablero.
 
-### Paso 11. Compilar con Play
+### Paso 8. Pedir a Codex que explique el programa
 
-Con `resultados/informe_01.tex` abierto, pulsa el icono de **Play**.
-
-Comprueba que se genera:
+Copia el codigo de `juegos/tres_en_raya.py` y pregunta a Codex:
 
 ```text
-resultados/informe_01.pdf
+Explicame este programa Python para una persona que no sabe programar.
+No quiero una explicacion tecnica larga.
+
+Quiero entender:
+- que parte crea la ventana;
+- que parte crea los botones;
+- que parte comprueba si alguien gana;
+- que ocurre cuando pulso una casilla.
+
+No cambies el codigo.
 ```
 
-Si aparecen archivos `.aux`, `.log`, `.synctex.gz`, `.fls` o `.fdb_latexmk`, recuerda que son archivos auxiliares normales de LaTeX.
+Lee la respuesta y vuelve al archivo para localizar esas partes.
 
-### Paso 12. Probar un cambio en los datos
+### Paso 9. Hacer un cambio pequeno
 
-Abre `datos/datos_incidencias.tsv`.
+Haz solo un cambio sencillo en el codigo.
 
-Cambia la cantidad de la primera fila:
+Por ejemplo, cambia el titulo de la ventana:
 
-```text
-8
+```python
+ventana.title("Tres en raya")
 ```
 
 por:
 
-```text
-9
+```python
+ventana.title("Mi primer juego en Python")
 ```
 
-Guarda el TSV.
+Guarda el archivo y pulsa otra vez **Run Python File**.
 
-Vuelve a ejecutar:
+Comprueba que la ventana se abre con el nuevo titulo.
 
-```text
-python3 generar_informes.py
-```
+### Paso 10. Pedir una mejora pequena a Codex
 
-Abre otra vez `resultados/informe_01.tex` y comprueba que el dato ha cambiado.
-
-Despues compila de nuevo con el icono de **Play**.
-
-### Paso 13. Pedir ayuda a Codex sobre el programa
-
-Copia el programa `generar_informes.py` y pregunta a Codex:
+Pregunta a Codex:
 
 ```text
-Explicame este programa Python para una persona que no sabe programar.
-Quiero entender como abre la plantilla LaTeX, como lee el TSV y como reemplaza los marcadores.
-No cambies el codigo.
+Tengo este programa Python de tres en raya.
+Propón una unica mejora pequena y facil de entender.
+No cambies la estructura completa.
+Explica primero que hace la mejora.
+Despues muestra solo las lineas que tendria que cambiar.
 ```
 
-Despues pregunta:
+Aplica manualmente solo una mejora que entiendas.
+
+Si Codex propone demasiados cambios, responde:
 
 ```text
-Propón una unica mejora pequeña para que el programa sea mas claro.
-No inventes datos nuevos.
-Explica primero la mejora y despues muestra el cambio.
+Reduce la propuesta.
+Quiero un unico cambio pequeno, adecuado para una persona que esta empezando.
 ```
 
-Aplica manualmente solo lo que entiendas.
-
-### Paso 14. Preparar la entrega
+### Paso 11. Preparar la entrega
 
 Dentro de `e4`, crea una carpeta llamada:
 
@@ -366,36 +337,20 @@ entrega
 Copia dentro de `entrega`:
 
 ```text
-plantillas/plantilla_informe.tex
-datos/datos_incidencias.tsv
-generar_informes.py
-resultados/informe_01.tex
-resultados/informe_01.pdf
+probar_python.py
+juegos/tres_en_raya.py
 ```
 
-Puedes mantener la misma organizacion dentro de `entrega`:
-
-```text
-entrega/
-  plantillas/
-  datos/
-  resultados/
-  generar_informes.py
-```
-
-No es necesario copiar todos los archivos auxiliares. Pueden volver a generarse compilando el `.tex`.
+No hace falta entregar capturas salvo que se pidan expresamente.
 
 ## Producto de la sesion
 
 - Carpeta `curso-entorno/e4`.
-- Carpeta `plantillas`.
-- Plantilla `plantillas/plantilla_informe.tex`.
-- Carpeta `datos`.
-- Archivo de datos `datos/datos_incidencias.tsv`.
-- Programa `generar_informes.py`.
-- Carpeta `resultados`.
-- Archivos generados `resultados/informe_01.tex`, `resultados/informe_02.tex` e `resultados/informe_03.tex`.
-- PDF `resultados/informe_01.pdf`.
+- Archivo `probar_python.py`.
+- Carpeta `juegos`.
+- Programa `juegos/tres_en_raya.py`.
+- Juego ejecutado desde VS Code con **Run Python File**.
+- Una pequena modificacion realizada y comprobada.
 - Carpeta `entrega`.
 - Checklist de la sesion 4 compilado por el estudiante a partir de `checklists/checklist-sesion-4.tex`.
 
@@ -403,19 +358,14 @@ No es necesario copiar todos los archivos auxiliares. Pueden volver a generarse 
 
 - **Python**: lenguaje que puede ejecutar instrucciones y automatizar tareas.
 - **Interprete de Python**: programa instalado en el ordenador que ejecuta archivos `.py`.
-- **Extension Python**: complemento de VS Code que ayuda a editar, ejecutar y depurar archivos Python.
-- **Script**: archivo de codigo que ejecuta una tarea concreta.
-- **Plantilla**: archivo con una estructura fija y huecos que se rellenan despues.
-- **Marcador**: texto temporal que sera reemplazado, como `{{area}}`.
-- **TSV**: archivo de datos en texto, organizado por columnas separadas por tabuladores.
-- **Columna**: campo de datos identificado por un nombre, como `area` o `estado`.
-- **Fila**: conjunto de valores que pertenecen a un mismo registro.
-- **`csv.DictReader`**: herramienta de Python que lee un archivo de datos y trata cada fila como campos con nombre.
+- **Extension Python**: complemento de VS Code que ayuda a editar y ejecutar archivos Python.
+- **Archivo `.py`**: archivo que contiene codigo Python.
+- **Run Python File**: boton de VS Code que ejecuta el archivo Python abierto.
+- **Panel de salida**: zona inferior donde VS Code puede mostrar mensajes del programa.
+- **Interfaz grafica**: ventana con botones y elementos visuales.
+- **Tkinter**: herramienta incluida en Python para crear ventanas sencillas.
+- **Funcion**: bloque de codigo que realiza una tarea concreta.
 - **Variable**: nombre que guarda un valor dentro de un programa.
-- **Bucle**: instruccion que repite una accion varias veces.
-- **Ruta**: ubicacion de un archivo o carpeta, como `plantillas/plantilla_informe.tex`.
-- **Archivo de entrada**: archivo que lee un programa, como `datos/datos_incidencias.tsv`.
-- **Archivo de salida**: archivo creado por un programa, como `resultados/informe_01.tex`.
+- **Condicion**: pregunta que el programa usa para decidir que hacer.
+- **Evento**: accion del usuario que el programa recibe, por ejemplo pulsar un boton.
 - **Ejecutar**: poner en marcha un programa.
-- **Terminal integrada**: zona de VS Code donde se escriben comandos.
-- **Comando**: instruccion escrita en la terminal, como `python3 generar_informes.py`.

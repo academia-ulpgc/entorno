@@ -95,31 +95,15 @@ Pulsa **Instalar**.
 
 No hace falta instalar otro visor de PDF para esta practica. LaTeX Workshop incluye un visor integrado dentro de VS Code.
 
-### Paso 5. Configurar el PDF para que se abra en la ventana principal
+### Paso 5. Entender como se abrira el PDF
 
-Para evitar muchas ventanas, configura LaTeX Workshop para abrir el PDF como una pestaña dentro de VS Code.
+Para evitar muchas ventanas, trabajaremos siempre desde la ventana principal de VS Code.
 
-En la carpeta `e1`, crea una carpeta llamada:
+No hace falta crear archivos de configuracion.
 
-```text
-.vscode
-```
+Cuando se genere el PDF, se abrira desde el explorador de archivos de VS Code. Si se abre en otra columna o resulta incomodo, cierra esa vista y vuelve a abrir el PDF desde el explorador.
 
-Dentro de `.vscode`, crea un archivo llamado:
-
-```text
-settings.json
-```
-
-Pega exactamente:
-
-```json
-{
-  "latex-workshop.view.pdf.viewer": "tab"
-}
-```
-
-Guarda el archivo.
+La idea es sencilla: una carpeta de proyecto, una ventana principal y los archivos necesarios a la vista.
 
 ### Paso 6. Crear el archivo LaTeX
 
@@ -299,6 +283,5 @@ No aceptes cambios automaticamente. Aplica manualmente en VS Code solo lo que en
 - **LaTeX Workshop**: extension de VS Code para compilar LaTeX y visualizar PDFs.
 - **Icono de Play**: boton que ejecuta la compilacion.
 - **Archivo auxiliar**: archivo tecnico creado durante la compilacion, como `.aux`, `.log` o `.synctex.gz`.
-- **`settings.json`**: archivo de configuracion de VS Code.
 - **Codex**: asistente de IA que ayuda a entender y modificar documentos o codigo.
 - **Prompt**: instruccion o pregunta escrita a una IA.
