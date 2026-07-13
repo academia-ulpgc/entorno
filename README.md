@@ -1,113 +1,120 @@
-# Entorno. Laboratorio práctico de productividad digital con VS Code, LaTeX y Copilot
+# Entorno. VS Code, LaTeX y Copilot para programar documentos
 
-## Propósito
+## Proposito
 
-Este bloque, llamado **Entorno**, introduce Visual Studio Code como espacio de trabajo productivo para personas sin perfil técnico que van a utilizar herramientas de IA, documentos estructurados, LaTeX y GitHub Copilot.
+Este bloque, llamado **Entorno**, introduce Visual Studio Code como espacio de trabajo para personas sin perfil informatico.
 
-La primera sesión sirve para familiarizarse con Visual Studio Code como herramienta central: abrir carpetas, crear archivos, instalar extensiones, escribir codigo LaTeX, compilar y revisar resultados.
+La idea principal es sencilla: con apoyo de la IA, una persona puede desarrollar competencias para automatizar parte de su trabajo y preparar documentos mejor estructurados. No necesita convertirse en informatica. La IA actua como apoyo tecnico, y VS Code ofrece el espacio donde ordenar archivos, escribir instrucciones y revisar resultados.
 
-Entorno busca que el alumnado pueda:
+En este bloque se trabaja una idea central: **programar documentos**.
 
-- preparar un entorno reproducible de trabajo;
-- configurar VS Code en español;
-- instalar y usar extensiones clave;
-- crear, compilar y revisar documentos LaTeX;
-- ejecutar scripts Python sencillos;
-- usar Copilot para redactar, corregir y documentar contenidos;
-- automatizar tareas básicas sin necesidad de programación avanzada.
+Programar documentos significa:
 
-## Estructura prevista
+- crear una carpeta de proyecto;
+- escribir un archivo fuente con instrucciones;
+- compilar ese archivo;
+- obtener un PDF;
+- revisar el resultado;
+- corregir el archivo fuente y volver a compilar.
 
-Entorno dura **5 horas en total** y está diseñado como un taller práctico con cuatro sesiones de aproximadamente **1 hora y 15 minutos** cada una.
+Usaremos LaTeX porque permite ver con claridad esa relacion entre codigo y resultado.
 
-Cada sesión incluye su propia práctica paso a paso. No hay una separación entre "sesión" y "práctica": cada archivo de sesión es también el guion de trabajo que sigue el estudiante.
+## Duracion
 
-- Sesión 1: trabajar con VS Code en español, LaTeX y Copilot.
-- Sesión 2: crear y compilar documentos LaTeX y ejecutar scripts Python.
-- Sesión 3: usar Copilot Chat con contexto para redactar, corregir y documentar.
-- Sesión 4: automatizar una tarea sencilla y preparar una entrega ordenada.
+Entorno dura **5 horas en total** y se organiza en cuatro sesiones de aproximadamente **1 hora y 15 minutos**.
+
+Cada sesion es tambien una practica. El estudiante sigue el archivo de la sesion paso a paso.
 
 ## Sesiones
 
-- [Sesión 1 - VS Code en español, LaTeX y Copilot](sesiones/sesion-v-1-preparar-vscode.md)
-- [Sesión 2 - Primer proyecto con LaTeX y Python](sesiones/sesion-v-2-primer-proyecto.md)
-- [Sesión 3 - Copilot con contexto e instrucciones](sesiones/sesion-v-3-copilot-contexto.md)
-- [Sesión 4 - Automatización sencilla y entrega del trabajo](sesiones/sesion-v-4-automatizacion-entrega.md)
+- [Sesion 1 - Preparar VS Code, LaTeX y Copilot](sesiones/sesion-1-preparar-vscode.md)
+- [Sesion 2 - Crear un documento municipal estructurado](sesiones/sesion-2-documento-municipal.md)
+- [Sesion 3 - Usar Copilot con contexto y sin inventar informacion](sesiones/sesion-3-copilot-contexto.md)
+- [Sesion 4 - Primer uso de Python para generar un documento LaTeX](sesiones/sesion-4-entrega.md)
 
-## Ejemplos incluidos
+## Checklists en PDF
 
-- [Primer proyecto](ejemplos/primer-proyecto): archivos minimos para probar LaTeX y Python.
-- [Proyecto de solicitudes](ejemplos/proyecto-solicitudes): CSV ficticio, script Python y ejemplo de informe generado en texto plano.
+Los checklists se entregan como documentos separados para que puedan imprimirse o revisarse al final de cada sesion.
 
-## Resultados esperados
+- [Checklist sesion 1](checklists/checklist-sesion-1.pdf)
+- [Checklist sesion 2](checklists/checklist-sesion-2.pdf)
+- [Checklist sesion 3](checklists/checklist-sesion-3.pdf)
+- [Checklist sesion 4](checklists/checklist-sesion-4.pdf)
 
-Al completar Entorno, cada participante debería ser capaz de:
+## Estructura de carpetas recomendada para el alumnado
 
-- trabajar con VS Code como herramienta central;
-- generar y compilar documentos con LaTeX;
-- ejecutar y depurar scripts Python sencillos;
-- usar GitHub Copilot, con acceso institucional si está disponible, como asistente para ideas, correcciones y documentación;
-- identificar cuándo confiar en una sugerencia de Copilot y cuándo validar el resultado.
+Durante el bloque se recomienda crear una carpeta llamada:
 
-## Extensiones principales
+```text
+curso-entorno
+```
 
-- Interfaz en español:
-  - Nombre exacto: Spanish Language Pack for Visual Studio Code
-  - Creador: Microsoft
-  - Identificador: `MS-CEINTL.vscode-language-pack-es`
+Dentro de ella, cada sesion tendra su propia carpeta:
 
-- Soporte LaTeX:
-  - Nombre exacto: LaTeX Workshop
-  - Creador: James Yu
-  - Identificador: `James-Yu.latex-workshop`
+```text
+curso-entorno/
+  e1/
+  e2/
+  e3/
+  e4/
+```
 
-- Python:
-  - Nombre exacto: Python
-  - Creador: Microsoft
-  - Identificador: `ms-python.python`
+En la primera sesion, el proyecto se llama **e1**.
 
-- Copilot:
-  - Nombre exacto: GitHub Copilot
-  - Creador: GitHub
-  - Identificador: `GitHub.copilot`
-
-- Chat de Copilot:
-  - Nombre exacto: GitHub Copilot Chat
-  - Creador: GitHub
-  - Identificador: `GitHub.copilot-chat`
-
-## Requisitos previos
-
-- Ordenador con permisos para instalar programas.
-- Visual Studio Code instalado o posibilidad de instalarlo durante la sesion.
-- Cuenta institucional con acceso a Copilot o cuenta indicada por la organizacion.
-- Distribucion LaTeX instalada o acceso a una alternativa preparada.
-- Python instalado o posibilidad de instalarlo durante la sesion.
-
-## Software que debe estar disponible
+## Herramientas principales
 
 - Visual Studio Code:
-  - Uso: editor principal del curso.
+  - Uso: editor principal del bloque.
   - Enlace: <https://code.visualstudio.com/download>
 
+- Spanish Language Pack for Visual Studio Code:
+  - Creador oficial: Microsoft
+  - Identificador: `MS-CEINTL.vscode-language-pack-es`
+  - Uso: poner VS Code en español.
+
+- LaTeX Workshop:
+  - Creador oficial: James Yu
+  - Identificador: `James-Yu.latex-workshop`
+  - Uso: compilar documentos LaTeX con el icono de Play y abrir el PDF dentro de VS Code.
+
+- GitHub Copilot:
+  - Creador: GitHub
+  - Identificador: `GitHub.copilot`
+  - Uso: pedir ayuda para explicar, revisar y mejorar documentos.
+
+- GitHub Copilot Chat:
+  - Creador: GitHub
+  - Identificador: `GitHub.copilot-chat`
+  - Uso: conversar con Copilot dentro de VS Code.
+
 - Python:
-  - Uso: ejecutar scripts sencillos y automatizaciones.
+  - Uso: se introduce solo en la ultima sesion para generar automaticamente un archivo LaTeX sencillo.
   - Enlace: <https://www.python.org/downloads/>
 
-- MacTeX, TeX Live o MiKTeX:
-  - Uso: compilar documentos LaTeX en PDF desde VS Code.
-  - Enlaces: <https://tug.org/mactex/>, <https://tug.org/texlive/>, <https://miktex.org/download>
+## Visor de PDF
 
-- Cuenta institucional o cuenta autorizada:
-  - Uso: iniciar sesión y usar Copilot.
-  - Enlace: según indique la organización.
+No hace falta instalar otro visor de PDF para estas practicas si LaTeX Workshop funciona correctamente. La extension incluye un visor integrado.
 
-## Fuentes oficiales consultadas
+Para evitar muchas ventanas abiertas, se configurara LaTeX Workshop para abrir el PDF en una pestaña de la ventana principal de VS Code.
 
-- Descarga de VS Code: <https://code.visualstudio.com/download>
-- Marketplace de extensiones de VS Code: <https://code.visualstudio.com/docs/configure/extensions/extension-marketplace>
-- Configuracion de Copilot en VS Code: <https://code.visualstudio.com/docs/setup/copilot>
-- Documentacion de GitHub Copilot: <https://docs.github.com/en/copilot/get-started-with-github-copilot>
-- Inicio de sesión único en GitHub Enterprise Cloud: <https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-single-sign-on/about-authentication-with-single-sign-on>
-- Contexto para IA en VS Code: <https://code.visualstudio.com/docs/chat/copilot-chat-context>
-- Personalizacion de agentes e instrucciones en VS Code: <https://code.visualstudio.com/docs/agent-customization/overview>
+La configuracion recomendada es:
+
+```json
+{
+  "latex-workshop.view.pdf.viewer": "tab"
+}
+```
+
+## Resultado esperado
+
+Al terminar Entorno, cada participante deberia poder:
+
+- abrir una carpeta de proyecto en VS Code;
+- crear y editar archivos LaTeX;
+- entender que el archivo `.tex` es el codigo fuente del documento;
+- compilar con el icono de Play;
+- reconocer el PDF como resultado;
+- entender que LaTeX genera archivos auxiliares como `.aux`, `.log` o `.synctex.gz`;
+- pedir ayuda a Copilot sin aceptar automaticamente lo que proponga;
+- entender que Python puede crear archivos automaticamente;
+- revisar documentos antes de entregarlos.
