@@ -1,4 +1,4 @@
-# Sesion 3 - Usar Codex con un PDF de contexto legal
+# Sesion 3 - Usar Codex con un LaTeX de contexto legal
 
 ## Duracion
 
@@ -6,16 +6,16 @@
 
 ## Objetivo
 
-Aprender a pedir ayuda a Codex usando un PDF de contexto normativo y comprobando que la IA no inventa legislacion, jurisprudencia, plazos ni conclusiones.
+Aprender a pedir ayuda a Codex usando un archivo LaTeX de contexto normativo y comprobando que la IA no inventa legislacion, jurisprudencia, plazos ni conclusiones.
 
 En esta sesion se trabajara con un extracto formativo de la **Ley 39/2015, de Procedimiento Administrativo Comun de las Administraciones Publicas**.
 
 La idea principal es:
 
-- dar a Codex un documento de contexto;
-- pedirle que trabaje solo con ese documento;
+- dar a Codex un texto de contexto en LaTeX;
+- pedirle que trabaje solo con ese texto;
 - exigir que marque lo dudoso como pendiente de verificacion;
-- pasar el resultado revisado a un documento LaTeX.
+- pasar el resultado revisado a otro documento LaTeX.
 
 ## Practica paso a paso
 
@@ -36,12 +36,12 @@ e3/
   contexto/
 ```
 
-### Paso 2. Copiar el PDF de contexto
+### Paso 2. Copiar el LaTeX de contexto
 
 Desde el material del curso, localiza el archivo:
 
 ```text
-contexto/ley-39-2015-extracto-procedimiento-administrativo.pdf
+materiales/ley 39-2015/ley-39-2015-extracto-procedimiento-administrativo.tex
 ```
 
 Copialo dentro de la carpeta `contexto` de tu proyecto `e3`.
@@ -51,18 +51,31 @@ La estructura debe quedar asi:
 ```text
 e3/
   contexto/
-    ley-39-2015-extracto-procedimiento-administrativo.pdf
+    ley-39-2015-extracto-procedimiento-administrativo.tex
 ```
 
-Abre el PDF desde VS Code y lee la primera pagina.
+Abre el archivo desde VS Code y lee las primeras secciones.
 
 Comprueba:
 
 - que el documento indica que es un extracto formativo;
 - que remite al BOE como fuente oficial;
-- que advierte que cualquier uso real exige verificacion juridica.
+- que advierte que cualquier uso real exige verificacion juridica;
+- que esta escrito en LaTeX.
 
-### Paso 3. Crear el borrador LaTeX
+### Paso 3. Compilar el contexto
+
+Con `ley-39-2015-extracto-procedimiento-administrativo.tex` abierto, pulsa el icono de **Play**.
+
+Comprueba que se genera:
+
+```text
+ley-39-2015-extracto-procedimiento-administrativo.pdf
+```
+
+Este PDF solo sirve para leer comodamente el contexto. La fuente que se usara con Codex sera el archivo `.tex`.
+
+### Paso 4. Crear el borrador LaTeX
 
 En `e3`, crea:
 
@@ -113,9 +126,9 @@ Pendiente de redactar.
 
 Guarda el archivo.
 
-### Paso 4. Hacer una pregunta demasiado abierta
+### Paso 5. Hacer una pregunta demasiado abierta
 
-Antes de usar el PDF, pregunta a Codex:
+Antes de usar el contexto, pregunta a Codex:
 
 ```text
 Tengo una solicitud ciudadana incompleta sobre una incidencia en la via publica.
@@ -134,20 +147,27 @@ Comprueba si Codex:
 
 El objetivo de este paso es ver el riesgo de trabajar sin contexto.
 
-### Paso 5. Repetir la pregunta usando el PDF como contexto
+### Paso 6. Repetir la pregunta usando el LaTeX de contexto
 
-Ahora abre Codex y adjunta el PDF:
+Abre:
 
 ```text
-contexto/ley-39-2015-extracto-procedimiento-administrativo.pdf
+contexto/ley-39-2015-extracto-procedimiento-administrativo.tex
 ```
 
-Si tu interfaz no permite adjuntar el PDF, abre el PDF, copia las secciones relevantes y pegalas como contexto antes de la pregunta.
+Copia todo el contenido del archivo.
 
-Pregunta exactamente:
+Abre Codex y escribe:
 
 ```text
-Usa el PDF adjunto como unica fuente normativa.
+Voy a darte un archivo LaTeX de contexto normativo.
+Usalo como unica fuente normativa para la tarea siguiente.
+
+CONTEXTO:
+
+[pega aqui el contenido completo de ley-39-2015-extracto-procedimiento-administrativo.tex]
+
+TAREA:
 
 Estoy preparando un informe interno sobre una solicitud ciudadana incompleta relacionada con una incidencia en la via publica.
 
@@ -158,38 +178,39 @@ Necesito completar estas secciones de un documento LaTeX:
 - Comprobaciones antes de firmar
 
 Condiciones:
-- no inventes articulos que no aparezcan en el PDF;
+- no inventes articulos que no aparezcan en el contexto;
 - no cites jurisprudencia;
 - no inventes plazos concretos;
-- si el PDF no contiene detalle suficiente, escribe "pendiente de verificacion juridica";
-- menciona entre parentesis el articulo del PDF que justifica cada recomendacion;
-- manten un lenguaje claro para personal no juridico.
+- si el contexto no contiene detalle suficiente, escribe "pendiente de verificacion juridica";
+- menciona entre parentesis el articulo del contexto que justifica cada recomendacion;
+- manten un lenguaje claro para personal no juridico;
+- no reescribas todo el documento, solo propone el contenido de las secciones pendientes.
 
-Primero explica que informacion del PDF vas a usar.
+Primero explica que informacion del contexto vas a usar.
 Despues propone el texto para cada seccion.
 ```
 
-### Paso 6. Revisar la respuesta antes de copiar
+### Paso 7. Revisar la respuesta antes de copiar
 
 No copies la respuesta automaticamente.
 
 Comprueba:
 
-- que Codex se limita al PDF;
+- que Codex se limita al LaTeX de contexto;
 - que no aparecen leyes distintas;
 - que no aparece jurisprudencia;
-- que las recomendaciones mencionan articulos incluidos en el PDF;
+- que las recomendaciones mencionan articulos incluidos en el contexto;
 - que las dudas quedan marcadas como `pendiente de verificacion juridica`.
 
 Si Codex inventa informacion, responde:
 
 ```text
 Rehaz la respuesta.
-Has incluido informacion que no esta en el PDF.
-Usa solo el PDF adjunto y marca como pendiente de verificacion juridica lo que no puedas justificar.
+Has incluido informacion que no esta en el LaTeX de contexto.
+Usa solo el contexto proporcionado y marca como pendiente de verificacion juridica lo que no puedas justificar.
 ```
 
-### Paso 7. Completar el LaTeX manualmente
+### Paso 8. Completar el LaTeX manualmente
 
 Vuelve a:
 
@@ -199,9 +220,9 @@ informe_revision_procedimiento.tex
 
 Sustituye los textos `Pendiente de redactar.` por el contenido revisado.
 
-No pegues nada que no entiendas o que no puedas justificar con el PDF.
+No pegues nada que no entiendas o que no puedas justificar con el LaTeX de contexto.
 
-### Paso 8. Compilar con Play
+### Paso 9. Compilar con Play
 
 Con `informe_revision_procedimiento.tex` abierto, pulsa el icono de **Play**.
 
@@ -219,7 +240,7 @@ Explicamelo en lenguaje sencillo y dime que linea debo revisar.
 No reescribas todo el documento.
 ```
 
-### Paso 9. Revisar el resultado final
+### Paso 10. Revisar el resultado final
 
 Abre el PDF en la ventana principal de VS Code.
 
@@ -228,10 +249,10 @@ Comprueba:
 - que el informe no dice ser una resolucion administrativa;
 - que no cierra el expediente;
 - que no inventa datos de la persona solicitante;
-- que las referencias proceden del PDF de contexto;
+- que las referencias proceden del LaTeX de contexto;
 - que cualquier duda juridica queda marcada para revision humana.
 
-### Paso 10. Preparar la entrega
+### Paso 11. Preparar la entrega
 
 Dentro de `e3`, crea una carpeta llamada:
 
@@ -242,7 +263,7 @@ entrega
 Copia dentro:
 
 ```text
-contexto/ley-39-2015-extracto-procedimiento-administrativo.pdf
+contexto/ley-39-2015-extracto-procedimiento-administrativo.tex
 informe_revision_procedimiento.tex
 informe_revision_procedimiento.pdf
 ```
@@ -253,10 +274,10 @@ No hace falta copiar los archivos auxiliares de LaTeX.
 
 - Carpeta `curso-entorno/e3`.
 - Carpeta `contexto`.
-- PDF `contexto/ley-39-2015-extracto-procedimiento-administrativo.pdf`.
+- Archivo `contexto/ley-39-2015-extracto-procedimiento-administrativo.tex`.
 - Archivo `informe_revision_procedimiento.tex`.
 - PDF `informe_revision_procedimiento.pdf`.
-- Comparacion entre una pregunta sin contexto y una pregunta con PDF de contexto.
+- Comparacion entre una pregunta sin contexto y una pregunta con LaTeX de contexto.
 - Checklist de la sesion 3 compilado por el estudiante a partir de `checklists/checklist-sesion-3.tex`.
 
 ## Glosario de terminos
@@ -265,7 +286,7 @@ No hace falta copiar los archivos auxiliares de LaTeX.
 - **Codex**: asistente de IA que ayuda a entender y modificar documentos o codigo.
 - **Prompt**: instruccion o pregunta escrita a una IA.
 - **Contexto**: informacion que se entrega a la IA para limitar y orientar la respuesta.
-- **PDF de contexto**: documento que Codex debe usar como fuente principal para responder.
+- **LaTeX de contexto**: archivo `.tex` que Codex debe usar como fuente principal para responder.
 - **Fuente normativa**: texto juridico o administrativo que sirve de base para una recomendacion.
 - **Alucinacion**: respuesta generada por una IA que contiene informacion inventada o no justificada.
 - **Verificacion juridica**: revision humana especializada antes de usar un texto en un caso real.

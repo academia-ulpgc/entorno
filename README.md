@@ -29,14 +29,15 @@ Cada sesion es tambien una practica. El estudiante sigue el archivo de la sesion
 
 - [Sesion 1 - Preparar VS Code, LaTeX y Codex](sesiones/sesion-1-preparar-vscode.md)
 - [Sesion 2 - Crear un documento municipal estructurado](sesiones/sesion-2-documento-municipal.md)
-- [Sesion 3 - Usar Codex con contexto y sin inventar informacion](sesiones/sesion-3-codex-contexto.md)
+- [Sesion 3 - Usar Codex con un LaTeX de contexto legal](sesiones/sesion-3-codex-contexto.md)
 - [Sesion 4 - Preparar Python en VS Code y ejecutar un programa](sesiones/sesion-4-entrega.md)
 
 ## Material de apoyo
 
 - [Bloque 2.1 - Presentacion de la primera sesion](bloque%202.1.pdf)
-- [PDF de contexto de la sesion 3: extracto formativo de la Ley 39/2015](contexto/ley-39-2015-extracto-procedimiento-administrativo.pdf)
-- [Codigo de ejemplo de la sesion 4: tres en raya](materiales/tres_en_raya.py)
+- [Carpeta de materiales](materiales/README.md)
+- [LaTeX de contexto de la sesion 3: extracto formativo de la Ley 39/2015](materiales/ley%2039-2015/ley-39-2015-extracto-procedimiento-administrativo.tex)
+- [Codigo de ejemplo de la sesion 4: tres en raya](materiales/3%20en%20raya/tres_en_raya.py)
 
 ## Checklists
 
