@@ -73,6 +73,7 @@ def nueva_partida():
 
 ventana = tk.Tk()
 ventana.title("Tres en raya")
+ventana.geometry("360x430+200+120")
 ventana.resizable(False, False)
 
 etiqueta_estado = tk.Label(
@@ -103,5 +104,12 @@ boton_nueva = tk.Button(
     command=nueva_partida,
 )
 boton_nueva.grid(row=4, column=0, columnspan=3, sticky="ew", padx=4, pady=8)
+
+print("Juego iniciado. Si no ves la ventana, mira detras de VS Code o en el Dock/barra de tareas.")
+
+ventana.update_idletasks()
+ventana.lift()
+ventana.attributes("-topmost", True)
+ventana.after(500, lambda: ventana.attributes("-topmost", False))
 
 ventana.mainloop()

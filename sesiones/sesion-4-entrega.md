@@ -210,6 +210,7 @@ def nueva_partida():
 
 ventana = tk.Tk()
 ventana.title("Tres en raya")
+ventana.geometry("360x430+200+120")
 ventana.resizable(False, False)
 
 etiqueta_estado = tk.Label(
@@ -241,6 +242,13 @@ boton_nueva = tk.Button(
 )
 boton_nueva.grid(row=4, column=0, columnspan=3, sticky="ew", padx=4, pady=8)
 
+print("Juego iniciado. Si no ves la ventana, mira detras de VS Code o en el Dock/barra de tareas.")
+
+ventana.update_idletasks()
+ventana.lift()
+ventana.attributes("-topmost", True)
+ventana.after(500, lambda: ventana.attributes("-topmost", False))
+
 ventana.mainloop()
 ```
 
@@ -257,6 +265,13 @@ juegos/tres_en_raya.py
 Pulsa el boton **Run Python File**.
 
 Debe abrirse una ventana con un tablero de tres en raya.
+
+Si no ves la ventana:
+
+- mira si esta detras de VS Code;
+- mira el Dock o la barra de tareas;
+- revisa el panel inferior de VS Code y busca el mensaje `Juego iniciado`;
+- si aparece un mensaje de error, copialo y pegalo en Codex.
 
 Juega una partida pulsando en las casillas.
 
