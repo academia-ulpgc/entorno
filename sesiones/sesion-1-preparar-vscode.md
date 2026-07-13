@@ -95,33 +95,9 @@ Pulsa **Instalar**.
 
 No hace falta instalar otro visor de PDF para esta practica. LaTeX Workshop incluye un visor integrado dentro de VS Code.
 
-### Paso 5. Configurar el PDF para que se abra en la ventana principal
-
-Para evitar muchas ventanas, configura LaTeX Workshop para abrir el PDF como una pestaña dentro de VS Code.
-
-En la carpeta `e1`, crea una carpeta llamada:
-
-```text
-.vscode
-```
-
-Dentro de `.vscode`, crea un archivo llamado:
-
-```text
-settings.json
-```
-
-Pega exactamente:
-
-```json
-{
-  "latex-workshop.view.pdf.viewer": "tab"
-}
-```
-
 Guarda el archivo.
 
-### Paso 6. Crear el archivo LaTeX
+### Paso 5. Crear el archivo LaTeX
 
 En la carpeta `e1`, crea:
 
@@ -295,16 +271,16 @@ No aceptes cambios automaticamente. Aplica manualmente solo lo que entiendas.
 
 ## Glosario de terminos
 
-- **VS Code**: programa que usaremos para abrir carpetas, crear archivos y trabajar con documentos.
-- **Carpeta de proyecto**: carpeta que contiene todos los archivos de una practica.
-- **e1**: nombre del primer proyecto dentro de `curso-entorno`.
-- **Archivo `.tex`**: archivo fuente escrito en LaTeX. Es el codigo del documento.
-- **Codigo fuente**: instrucciones que escribimos para que una herramienta genere un resultado.
-- **LaTeX**: sistema para crear documentos estructurados a partir de instrucciones de texto.
-- **Compilar**: convertir el archivo `.tex` en un PDF.
-- **PDF**: documento final que se puede leer, imprimir o enviar.
-- **LaTeX Workshop**: extension de VS Code que permite compilar LaTeX y ver el PDF integrado.
-- **Icono de Play**: boton que inicia la compilacion del documento.
-- **Archivo auxiliar**: archivo creado por LaTeX durante la compilacion, como `.aux`, `.log` o `.synctex.gz`.
+- **VS Code**: editor de codigo que permite abrir carpetas, crear archivos y usar extensiones.
+- **Extension**: complemento que añade funciones a VS Code.
+- **Archivo `.tex`**: archivo de texto que contiene codigo LaTeX.
+- **Codigo fuente**: instrucciones escritas en un archivo antes de generar el resultado final.
+- **LaTeX**: lenguaje para crear documentos a partir de instrucciones.
+- **Compilar**: convertir codigo fuente en un resultado, en este caso un PDF.
+- **PDF**: archivo final generado tras compilar el documento.
+- **LaTeX Workshop**: extension de VS Code para compilar LaTeX y visualizar PDFs.
+- **Icono de Play**: boton que ejecuta la compilacion.
+- **Archivo auxiliar**: archivo tecnico creado durante la compilacion, como `.aux`, `.log` o `.synctex.gz`.
+- **`settings.json`**: archivo de configuracion de VS Code.
 - **Copilot**: asistente de IA integrado en VS Code.
-- **SSO**: inicio de sesion unico con la cuenta autorizada por la organizacion.
+- **SSO**: sistema de inicio de sesion unico.

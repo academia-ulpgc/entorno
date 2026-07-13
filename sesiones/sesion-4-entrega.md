@@ -237,13 +237,15 @@ No es necesario copiar todos los archivos auxiliares. Pueden volver a generarse 
 ## Glosario de terminos
 
 - **Python**: lenguaje que puede ejecutar instrucciones y automatizar tareas.
-- **Programa**: archivo con instrucciones que el ordenador ejecuta.
+- **Script**: archivo de codigo que ejecuta una tarea concreta.
 - **CSV**: archivo de datos en texto, organizado por columnas separadas por comas.
-- **Fila**: una linea de datos dentro del CSV.
-- **Generar**: crear automaticamente un archivo a partir de instrucciones.
-- **Archivo de salida**: archivo creado por un programa.
+- **`csv.DictReader`**: herramienta de Python que lee un CSV y trata cada fila como un conjunto de campos con nombre.
+- **Variable**: nombre que guarda un valor dentro de un programa.
+- **Lista**: estructura de Python que guarda varios elementos ordenados.
+- **Bucle**: instruccion que repite una accion varias veces.
+- **Archivo de entrada**: archivo que lee un programa, como `datos_incidencias.csv`.
+- **Archivo de salida**: archivo creado por un programa, como `informe_generado.tex`.
 - **`informe_generado.tex`**: documento LaTeX creado por Python.
 - **Ejecutar**: poner en marcha un programa.
 - **Terminal integrada**: zona de VS Code donde se escriben comandos.
-- **Revision humana**: comprobacion realizada por una persona antes de aceptar el resultado.
-- **Entrega**: conjunto final de archivos que se revisan o comparten.
+- **Comando**: instruccion escrita en la terminal, como `python3 generar_informe.py`.

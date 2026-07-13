@@ -219,13 +219,13 @@ Comprueba:
 
 ## Glosario de terminos
 
-- **Contexto**: informacion que se proporciona a la IA para orientar su respuesta.
-- **Fuente**: documento o dato usado como base para redactar.
-- **Prompt**: instruccion o pregunta que se escribe a Copilot.
-- **Pregunta vaga**: peticion poco concreta que deja demasiado margen a la IA.
-- **Pregunta con limites**: peticion que indica fuentes, condiciones y restricciones.
-- **Alucinacion**: respuesta de la IA que parece correcta pero contiene informacion inventada o no comprobada.
-- **Pendiente de verificacion**: aviso que indica que un dato debe revisarse antes de usarse.
-- **Borrador**: version inicial de un documento.
-- **Revision humana**: comprobacion realizada por una persona antes de aceptar el resultado de la IA.
-- **Dato personal**: informacion que permite identificar a una persona.
+- **IA generativa**: sistema capaz de producir texto, codigo u otros contenidos a partir de instrucciones.
+- **Copilot Chat**: panel de conversacion con Copilot dentro de VS Code.
+- **Prompt**: instruccion o pregunta escrita a una IA.
+- **Contexto**: informacion que se entrega a la IA para limitar y orientar la respuesta.
+- **Archivo abierto**: archivo visible en el editor que Copilot puede usar como referencia.
+- **Alucinacion**: respuesta generada por una IA que contiene informacion inventada o no justificada.
+- **Formato LaTeX**: estructura tecnica del documento, con comandos como `\section` o `\begin`.
+- **Error de compilacion**: problema que impide generar el PDF.
+- **Linea de error**: numero o zona del archivo donde LaTeX indica que puede estar el problema.
+- **Salida**: resultado que produce una herramienta, como una respuesta de Copilot o un PDF.

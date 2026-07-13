@@ -174,14 +174,15 @@ Aplica manualmente solo el cambio que entiendas.
 
 ## Glosario de terminos
 
-- **Proyecto e2**: carpeta usada para la segunda practica.
-- **Seccion**: parte principal de un documento LaTeX, creada con `\section`.
-- **Lista**: conjunto de elementos organizados con `itemize` e `item`.
-- **Tabla**: estructura para organizar informacion en filas y columnas.
-- **`tabular`**: entorno de LaTeX que crea una tabla.
-- **`hline`**: instruccion que dibuja una linea horizontal en una tabla.
-- **`p{4cm}`**: forma de indicar el ancho de una columna de tabla.
+- **Comando LaTeX**: instruccion que empieza normalmente con barra invertida, como `\section`.
+- **Entorno LaTeX**: bloque con inicio y fin, como `\begin{itemize}` y `\end{itemize}`.
+- **`section`**: comando LaTeX que crea un apartado.
+- **`itemize`**: entorno LaTeX que crea una lista con viñetas.
+- **`item`**: comando que crea un elemento dentro de una lista.
+- **`tabular`**: entorno LaTeX que crea una tabla.
+- **`hline`**: comando que dibuja una linea horizontal en una tabla.
+- **`p{4cm}`**: configuracion que fija el ancho de una columna.
 - **Compilacion**: proceso que transforma el archivo `.tex` en PDF.
-- **Recompilar**: volver a generar el PDF despues de hacer cambios.
-- **Dato ficticio**: informacion inventada para practicar sin usar datos reales.
-- **Validacion humana**: revision realizada por una persona antes de usar un documento.
+- **Recompilar**: volver a generar el PDF despues de modificar el codigo fuente.
+- **Archivo fuente**: archivo original que se edita, como `informe_servicios.tex`.
+- **Archivo generado**: archivo creado por una herramienta, como `informe_servicios.pdf`.
