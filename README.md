@@ -2,9 +2,17 @@
 
 ## Proposito
 
-Este modulo, llamado **Entorno**, introduce Visual Studio Code como espacio de trabajo para personas sin perfil informatico.
+Este modulo, llamado **Entorno**, introduce una nueva forma de trabajar con tecnologia para personas sin perfil informatico.
 
-La idea principal es sencilla: con apoyo de la IA, una persona puede desarrollar competencias para automatizar parte de su trabajo y preparar documentos mejor estructurados. No necesita convertirse en informatica. La IA actua como apoyo tecnico, y VS Code ofrece el espacio donde ordenar archivos, escribir instrucciones y revisar resultados.
+La idea principal coincide con la presentacion inicial: **programar sin ser informatico**. No se trata de aprender programacion clasica desde cero, sino de entender un metodo de trabajo: describir una tarea, preparar archivos, pedir ayuda a Codex, probar el resultado y revisar antes de aceptar nada.
+
+En este modulo, VS Code funciona como **mesa de trabajo**. Todo ocurre dentro de una carpeta ordenada: archivos fuente, materiales de apoyo, resultados y checklists. LaTeX permite ver con claridad la relacion entre instrucciones y resultado: se escribe un archivo `.tex`, se compila con el icono de Play y se obtiene un PDF revisable.
+
+Codex se presenta como apoyo tecnico. Puede explicar errores, proponer cambios y ayudar a entender codigo o documentos, pero no sustituye el criterio de la persona. La regla de trabajo del modulo es:
+
+```text
+Codex propone. La persona prueba, revisa y decide.
+```
 
 En este modulo se trabaja una idea central: **programar documentos**.
 
@@ -17,7 +25,7 @@ Programar documentos significa:
 - revisar el resultado;
 - corregir el archivo fuente y volver a compilar.
 
-Usaremos LaTeX porque permite ver con claridad esa relacion entre codigo y resultado.
+Usaremos LaTeX porque permite ver con claridad esa relacion entre codigo y resultado. Al final del modulo tambien se prepara Python desde VS Code, no para automatizar todavia todo el proceso, sino para dejar listo el entorno que se usara despues en el modulo de Automatizacion.
 
 ## Duracion
 
@@ -34,7 +42,7 @@ Cada sesion es tambien una practica. El estudiante sigue el archivo de la sesion
 
 ## Material de apoyo
 
-- [Bloque 2.1 - Presentacion de la primera sesion](2.1%20entorno.pdf)
+- [Modulo 2.1 - Presentacion de la primera sesion](2.1%20entorno.pdf)
 - [Carpeta de materiales](materiales/README.md)
 - [LaTeX de contexto de la sesion 3: extracto formativo de la Ley 39/2015](materiales/ley%2039-2015/ley-39-2015-extracto-procedimiento-administrativo.tex)
 - [Codigo de ejemplo de la sesion 4: tres en raya](materiales/3%20en%20raya/tres_en_raya.py)
