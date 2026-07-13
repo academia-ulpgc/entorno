@@ -1,9 +1,0 @@
-id,area,tipo,estado,dias_respuesta
-1,Urbanismo,Licencia,Resuelta,12
-2,Servicios Sociales,Ayuda,Pendiente,8
-3,Urbanismo,Consulta,Resuelta,5
-4,Medio Ambiente,Queja,Pendiente,15
-5,Servicios Sociales,Ayuda,Resuelta,20
-6,Medio Ambiente,Consulta,Resuelta,4
-7,Urbanismo,Licencia,Pendiente,18
-8,Atención Ciudadana,Consulta,Resuelta,2
