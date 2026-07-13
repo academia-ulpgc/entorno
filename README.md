@@ -34,7 +34,7 @@ Cada sesion es tambien una practica. El estudiante sigue el archivo de la sesion
 
 ## Material de apoyo
 
-- [Bloque 2.1 - Presentacion de la primera sesion](bloque%202.1.pdf)
+- [Bloque 2.1 - Presentacion de la primera sesion](2.1%20entorno.pdf)
 - [Carpeta de materiales](materiales/README.md)
 - [LaTeX de contexto de la sesion 3: extracto formativo de la Ley 39/2015](materiales/ley%2039-2015/ley-39-2015-extracto-procedimiento-administrativo.tex)
 - [Codigo de ejemplo de la sesion 4: tres en raya](materiales/3%20en%20raya/tres_en_raya.py)
