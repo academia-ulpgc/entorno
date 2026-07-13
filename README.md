@@ -30,7 +30,7 @@ Cada sesion es tambien una practica. El estudiante sigue el archivo de la sesion
 - [Sesion 1 - Preparar VS Code, LaTeX y Codex](sesiones/sesion-1-preparar-vscode.md)
 - [Sesion 2 - Crear un documento municipal estructurado](sesiones/sesion-2-documento-municipal.md)
 - [Sesion 3 - Usar Codex con un LaTeX de contexto legal](sesiones/sesion-3-codex-contexto.md)
-- [Sesion 4 - Preparar Python en VS Code y ejecutar un programa](sesiones/sesion-4-entrega.md)
+- [Sesion 4 - Preparar Python en VS Code y ejecutar un programa](sesiones/sesion-4-python-vscode.md)
 
 ## Material de apoyo
 
