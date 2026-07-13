@@ -30,7 +30,11 @@ Cada sesion es tambien una practica. El estudiante sigue el archivo de la sesion
 - [Sesion 1 - Preparar VS Code, LaTeX y Codex](sesiones/sesion-1-preparar-vscode.md)
 - [Sesion 2 - Crear un documento municipal estructurado](sesiones/sesion-2-documento-municipal.md)
 - [Sesion 3 - Usar Codex con contexto y sin inventar informacion](sesiones/sesion-3-codex-contexto.md)
-- [Sesion 4 - Primer uso de Python para generar un documento LaTeX](sesiones/sesion-4-entrega.md)
+- [Sesion 4 - Usar Python para rellenar una plantilla LaTeX](sesiones/sesion-4-entrega.md)
+
+## Material de apoyo
+
+- [Bloque 2.1 - Presentacion de la primera sesion](bloque%202.1.pdf)
 
 ## Checklists
 
@@ -93,8 +97,14 @@ En la primera sesion, el proyecto se llama **e1**.
   - Acceso: <https://chatgpt.com/> con la cuenta indicada para el curso.
 
 - Python:
-  - Uso: se introduce solo en la ultima sesion para generar automaticamente un archivo LaTeX sencillo.
+  - Uso: se introduce solo en la ultima sesion para rellenar una plantilla LaTeX con datos de un archivo TSV.
   - Enlace: <https://www.python.org/downloads/>
+
+- Extension Python para VS Code:
+  - Nombre exacto: Python
+  - Creador oficial: Microsoft
+  - Identificador: `ms-python.python`
+  - Uso: permite a VS Code trabajar mejor con archivos `.py`.
 
 ## Visor de PDF
 
@@ -121,5 +131,6 @@ Al terminar Entorno, cada participante deberia poder:
 - reconocer el PDF como resultado;
 - entender que LaTeX genera archivos auxiliares como `.aux`, `.log` o `.synctex.gz`;
 - pedir ayuda a Codex sin aceptar automaticamente lo que proponga;
-- entender que Python puede crear archivos automaticamente;
+- distinguir entre Python instalado en el ordenador y la extension Python de VS Code;
+- entender que Python puede abrir una plantilla, leer datos y crear documentos automaticamente;
 - revisar documentos antes de entregarlos.
