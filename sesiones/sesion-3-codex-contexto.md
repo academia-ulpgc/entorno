@@ -220,7 +220,6 @@ Comprueba:
 ## Glosario de terminos
 
 - **IA generativa**: sistema capaz de producir texto, codigo u otros contenidos a partir de instrucciones.
-- **ChatGPT**: servicio donde se accede a la cuenta de IA del curso.
 - **Codex**: asistente de IA que ayuda a entender y modificar documentos o codigo.
 - **Prompt**: instruccion o pregunta escrita a una IA.
 - **Contexto**: informacion que se entrega a la IA para limitar y orientar la respuesta.

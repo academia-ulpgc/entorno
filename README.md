@@ -88,13 +88,9 @@ En la primera sesion, el proyecto se llama **e1**.
   - Identificador: `James-Yu.latex-workshop`
   - Uso: compilar documentos LaTeX con el icono de Play y abrir el PDF dentro de VS Code.
 
-- ChatGPT:
-  - Uso: acceder a la cuenta del curso y trabajar con Codex como asistente de IA.
-  - Enlace: <https://chatgpt.com/>
-
 - Codex:
   - Uso: pedir ayuda para explicar, revisar y mejorar documentos y codigo.
-  - Acceso: desde la cuenta de ChatGPT indicada para el curso.
+  - Acceso: <https://chatgpt.com/> con la cuenta indicada para el curso.
 
 - Python:
   - Uso: se introduce solo en la ultima sesion para generar automaticamente un archivo LaTeX sencillo.

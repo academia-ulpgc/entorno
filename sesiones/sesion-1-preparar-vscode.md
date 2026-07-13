@@ -6,7 +6,7 @@
 
 ## Objetivo
 
-Preparar Visual Studio Code para trabajar con documentos LaTeX en español y empezar a usar Codex, desde la cuenta de ChatGPT, como apoyo.
+Preparar Visual Studio Code para trabajar con documentos LaTeX en español y empezar a usar Codex como apoyo.
 
 En esta sesion se introduce una idea importante: **hacer documentos en LaTeX se parece a programar**.
 
@@ -234,9 +234,9 @@ Debe abrirse como una pestaña dentro de la ventana principal.
 
 Si se abre en otra columna o resulta incomodo, cierra esa vista y vuelve a abrir el PDF desde el explorador. La idea es trabajar con una sola ventana principal para no perderse.
 
-### Paso 10. Abrir ChatGPT y usar Codex
+### Paso 10. Acceder a Codex
 
-Abre ChatGPT en el navegador:
+Abre en el navegador:
 
 ```text
 https://chatgpt.com/
@@ -244,7 +244,9 @@ https://chatgpt.com/
 
 Inicia sesion con la cuenta indicada para el curso.
 
-Si la cuenta muestra Codex como opcion, selecciona Codex. Si no aparece, usa ChatGPT como asistente siguiendo las mismas instrucciones.
+Selecciona **Codex**.
+
+Si no aparece Codex, no continues con otra herramienta: anota la incidencia y avisa al responsable del curso.
 
 No hace falta instalar ninguna extension adicional de IA en VS Code para esta practica.
 
@@ -298,6 +300,5 @@ No aceptes cambios automaticamente. Aplica manualmente en VS Code solo lo que en
 - **Icono de Play**: boton que ejecuta la compilacion.
 - **Archivo auxiliar**: archivo tecnico creado durante la compilacion, como `.aux`, `.log` o `.synctex.gz`.
 - **`settings.json`**: archivo de configuracion de VS Code.
-- **ChatGPT**: servicio donde se accede a la cuenta de IA del curso.
 - **Codex**: asistente de IA que ayuda a entender y modificar documentos o codigo.
 - **Prompt**: instruccion o pregunta escrita a una IA.
