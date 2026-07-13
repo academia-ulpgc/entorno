@@ -1,4 +1,4 @@
-# Materiales del bloque Entorno
+# Materiales del modulo Entorno
 
 Esta carpeta contiene los archivos de apoyo que se usan en las sesiones.
 

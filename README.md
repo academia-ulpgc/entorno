@@ -2,11 +2,11 @@
 
 ## Proposito
 
-Este bloque, llamado **Entorno**, introduce Visual Studio Code como espacio de trabajo para personas sin perfil informatico.
+Este modulo, llamado **Entorno**, introduce Visual Studio Code como espacio de trabajo para personas sin perfil informatico.
 
 La idea principal es sencilla: con apoyo de la IA, una persona puede desarrollar competencias para automatizar parte de su trabajo y preparar documentos mejor estructurados. No necesita convertirse en informatica. La IA actua como apoyo tecnico, y VS Code ofrece el espacio donde ordenar archivos, escribir instrucciones y revisar resultados.
 
-En este bloque se trabaja una idea central: **programar documentos**.
+En este modulo se trabaja una idea central: **programar documentos**.
 
 Programar documentos significa:
 
@@ -61,7 +61,7 @@ Al compilar tambien pueden aparecer archivos auxiliares como `.aux`, `.log` o `.
 
 ## Estructura de carpetas recomendada para el alumnado
 
-Durante el bloque se recomienda crear una carpeta llamada:
+Durante el modulo se recomienda crear una carpeta llamada:
 
 ```text
 curso-entorno
@@ -82,7 +82,7 @@ En la primera sesion, el proyecto se llama **e1**.
 ## Herramientas principales
 
 - Visual Studio Code:
-  - Uso: editor principal del bloque.
+  - Uso: editor principal del modulo.
   - Enlace: <https://code.visualstudio.com/download>
 
 - Spanish Language Pack for Visual Studio Code:
